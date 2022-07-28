@@ -1,0 +1,6 @@
+#!/bin/bash
+
+npx sequelize init:config
+npx sequelize init:migrations
+
+npm run start

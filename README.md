@@ -59,15 +59,45 @@ npm install --save-dev sequelize-cli
 npx sequelize init:config
 npx sequelize init:migrations
 
-// --- 执行变更数据库 ---
+// --- 创建数据库 ---
+npx sequelize db:create
 // --- 未创建表则会新建，创建过则忽略 ---
 npx sequelize db:migrate
 
 // --- 删除表 ---
 npx sequelize db:migrate:undo:all
 
-// --- 需要在本地操作则需先修改 ---
+// --- 如需要在本地操作则需先修改 ---
 // database => config.json => host: eye_mysql => host: localhost
+```
+
+附录：
+```
+sequelize <命令>
+
+命令：
+  sequelize db:migrate                        Run pending migrations
+  sequelize db:migrate:schema:timestamps:add  Update migration table to have timestamps
+  sequelize db:migrate:status                 List the status of all migrations
+  sequelize db:migrate:undo                   Reverts a migration
+  sequelize db:migrate:undo:all               Revert all migrations ran
+  sequelize db:seed                           Run specified seeder
+  sequelize db:seed:undo                      Deletes data from the database
+  sequelize db:seed:all                       Run every seeder
+  sequelize db:seed:undo:all                  Deletes data from the database
+  sequelize db:create                         Create database specified by configuration
+  sequelize db:drop                           Drop database specified by configuration
+  sequelize init                              Initializes project
+  sequelize init:config                       Initializes configuration
+  sequelize init:migrations                   Initializes migrations
+  sequelize init:models                       Initializes models
+  sequelize init:seeders                      Initializes seeders
+  sequelize migration:generate                Generates a new migration file
+  sequelize migration:create                  Generates a new migration file
+  sequelize model:generate                    Generates a model and its migration
+  sequelize model:create                      Generates a model and its migration
+  sequelize seed:generate                     Generates a new seed file
+  sequelize seed:create                       Generates a new seed file
 ```
 
 ### 数据库

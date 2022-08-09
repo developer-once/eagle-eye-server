@@ -17,6 +17,7 @@ export default class Common extends Service {
       signed: true,
       encrypt: true,
     });
+    console.log(1111111, cookie);
     cookie = cookie?.split("#") || [];
     const email = cookie[ZERO] || "";
     if (email) {

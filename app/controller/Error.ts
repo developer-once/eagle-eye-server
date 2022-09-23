@@ -1,7 +1,7 @@
 import BaseController from './BaseController';
 
 /**
- * --- Error ---
+ * @controller ErrorController
  */
 export default class ErrorController extends BaseController {
   /**

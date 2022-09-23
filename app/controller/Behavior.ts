@@ -1,15 +1,10 @@
 import BaseController from './BaseController';
 
 /**
- * --- Behavior ---
+ * save report error msg to MYSQL
+ * @controller 上报 Controller
  */
 export default class BehaviorController extends BaseController {
-  /**
-   * --- 查询点击事件 ---
-   * @param { String } app_key
-   * @param { String } startTime
-   * @param { String } endTime
-   */
   public async getClickDashboard() {
     const { ctx } = this;
     const { app_key, startTime, endTime } = ctx.request.query;

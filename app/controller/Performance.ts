@@ -1,7 +1,7 @@
 import BaseController from './BaseController';
 
 /**
- * --- Performance ---
+ * @controller PerformanceController
  */
 export default class PerformanceController extends BaseController {
 

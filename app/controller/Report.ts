@@ -2,10 +2,16 @@ import BaseController from './BaseController';
 
 /**
  * save report error msg to MYSQL
- * @param error
+ * @controller 上报 Controller
  */
 export default class ReportController extends BaseController {
-  // --- save user report ---
+  /**
+   * @summary 上报接口
+   * @router post /api/report
+   * @request query string appkey 项目 appkey
+   * @request query string event_type 事件类型
+   * @response 200 SuccessBody 返回结果
+   */
   public async report() {
     const { ctx } = this;
     const { userSubTable } = ctx.app.config;
@@ -59,7 +65,13 @@ export default class ReportController extends BaseController {
     this.success(data);
   }
 
-  // --- save page crash ---
+  /**
+   * @summary 上报崩溃接口
+   * @router post /api/report/crash
+   * @request query string appkey 项目 appkey
+   * @request query string origin 来源域名
+   * @response 200 SuccessBody 返回结果
+   */
   public async reportCrash() {
     const { ctx } = this;
     const body = ctx.request.body;

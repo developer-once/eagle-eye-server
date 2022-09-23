@@ -1,8 +1,7 @@
 import BaseController from './BaseController';
 
 /**
- * get report error msg Array<error>
- * @param error
+ * @controller ProjectController
  */
 export default class ProjectController extends BaseController {
 

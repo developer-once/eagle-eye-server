@@ -2,6 +2,7 @@ import BaseController from './BaseController';
 
 /**
  * --- Create project ---
+ * @controller UserController
  */
 export default class UserController extends BaseController {
 

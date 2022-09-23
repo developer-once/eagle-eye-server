@@ -3,6 +3,8 @@ import { Application } from 'egg';
 export default (app: Application) => {
   const { controller, router } = app;
 
+  // ---------- 重定向到swagger-ui.html ----------
+  router.redirect('/', '/swagger-ui.html' , 302);
 
   // ---------- Config ----------
   router.post('/api/get/config', controller.config.geAppConfig);

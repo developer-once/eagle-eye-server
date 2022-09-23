@@ -1,8 +1,10 @@
 import BaseController from './BaseController';
 
 /**
- * --- Config ---
+ * * --- Config ---
  * 根据 App_key 返回配置信息
+ * save report error msg to MYSQL
+ * @controller 上报 Controller
  */
 export default class ConfigController extends BaseController {
   /**

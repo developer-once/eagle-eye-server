@@ -18,7 +18,6 @@ module.exports = options => {
 
     const { path } = ctx.request;
     if (ignoreRouter.indexOf(path) !== -1) {
-      ctx.logger.info(`---- Api - ${path} -- log: [${moment(new Date()).format(FORMAT_TIME_STR)}]`, "params = :" , ctx.request?.body?.data || ctx.request?.query);
       await next();
       return
     }

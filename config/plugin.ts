@@ -12,6 +12,10 @@ const plugin: EggPlugin = {
   redis: {
     enable: true,
     package: 'egg-redis',
+  },
+  swaggerdoc: {
+    enable: true,
+    package: 'egg-swagger-doc',
   }
 };
 

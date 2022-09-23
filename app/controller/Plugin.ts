@@ -1,7 +1,7 @@
 import BaseController from './BaseController';
 
 /**
- * Chrome Plugin Extension
+ * @controller Chrome Plugin Extension
  */
 export default class PluginController extends BaseController {
   /**

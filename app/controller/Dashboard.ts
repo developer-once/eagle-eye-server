@@ -1,8 +1,9 @@
 import BaseController from './BaseController';
 
 /**
- * get report error msg Array<error>
- * @param error
+ * * --- SaveController ---
+ * save report error msg to MYSQL
+ * @controller 上报 SaveController
  */
 export default class SaveController extends BaseController {
 

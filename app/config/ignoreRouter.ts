@@ -5,6 +5,17 @@ export const ignoreRouter = [
   "/api/get/user",
 
   "/api/create/user",
+
+  // ----- swagger -----
+  "/swagger-doc",
+  "/swagger-ui.html",
+  "/swagger-ui-bundle.js",
+  "/swagger-ui-bundle.js.map",
+  "/swagger-ui-standalone-preset.js",
+  "/swagger-ui-standalone-preset.js.map",
+  "/swagger-ui.css",
+  "/swagger-ui.css.map",
+  "/favicon-32x32.png",
 ];
 
 // -- 声明无需检查 app_key 权限 --
@@ -17,6 +28,17 @@ export const ignoreRouterPermission = [
   "/api/report",
   "/api/report/crash",
   "/api/get/config",
+
+  // ----- swagger -----
+  "/swagger-doc",
+  "/swagger-ui.html",
+  "/swagger-ui-bundle.js",
+  "/swagger-ui-bundle.js.map",
+  "/swagger-ui-standalone-preset.js",
+  "/swagger-ui-standalone-preset.js.map",
+  "/swagger-ui.css",
+  "/swagger-ui.css.map",
+  "/favicon-32x32.png",
 ];
 
 // -- 声明需要登录的路由 - 后台查询需要 --

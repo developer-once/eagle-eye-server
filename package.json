@@ -43,9 +43,11 @@
     "@types/supertest": "^2.0.0",
     "autod": "^3.0.1",
     "autod-egg": "^1.1.0",
+    "cz-conventional-changelog": "^3.3.0",
     "egg-bin": "^4.11.0",
     "egg-ci": "^1.8.0",
     "egg-mock": "^3.16.0",
+    "egg-swagger-doc": "^2.3.2",
     "eslint": "^6.8.0",
     "eslint-config-egg": "^8.0.0",
     "sequelize-cli": "^6.3.0",
@@ -66,5 +68,10 @@
     "coverage"
   ],
   "author": "buyu",
-  "license": "MIT"
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }

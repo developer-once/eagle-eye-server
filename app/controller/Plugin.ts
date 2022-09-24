@@ -1,11 +1,14 @@
 import BaseController from './BaseController';
 
 /**
- * @controller Chrome Plugin Extension
+ * @controller PluginController
  */
 export default class PluginController extends BaseController {
   /**
-   * --- 创建 Chrome Plugin key ---
+   * @summary 创建 Chrome Plugin key
+   * @router post /api/create/plugin/key
+   * @request query string appkey 项目 appkey
+   * @response 200 SuccessBody 返回结果
    */
   public async createPluginKey() {
     const { ctx } = this;
@@ -16,7 +19,11 @@ export default class PluginController extends BaseController {
   }
 
   /**
-   * --- 验证 Chrome Plugin key ---
+   * @summary 验证 Chrome Plugin key
+   * @router get /api/plugin/key
+   * @request query string appkey 项目 appkey
+   * @request query string plugin_key 项目 plugin_key
+   * @response 200 SuccessBody 返回结果
    */
   public async validatePluginKey() {
     const { ctx } = this;
@@ -27,7 +34,10 @@ export default class PluginController extends BaseController {
   }
 
   /**
-   * --- 获取 plugin_key by app_key
+   * @summary 获取 plugin_key by app_key
+   * @router get /api/get/plugin/key
+   * @request query string appkey 项目 appkey
+   * @response 200 SuccessBody 返回结果
    */
   public async getPluginKeyByAppKey() {
     const { ctx } = this;

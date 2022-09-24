@@ -7,9 +7,11 @@ import BaseController from './BaseController';
 export default class UserController extends BaseController {
 
   /**
-   * --- Get user ---
-   * @param { String } email
-   * @param { String } password
+   * @summary Get user
+   * @router post /api/get/user
+   * @request query string email email
+   * @request query string password password
+   * @response 200 SuccessBody 返回结果
    */
   public async getUser() {
     const { ctx } = this;
@@ -23,8 +25,12 @@ export default class UserController extends BaseController {
   // 禁止注册
   // 用户数 > 1 return false=
   /**
-   * --- Create user ---
-   * @param { String } name
+   * @summary Create user
+   * @router post /api/create/user
+   * @request query string name name
+   * @request query string email email
+   * @request query string password password
+   * @response 200 SuccessBody 返回结果
    */
   public async createUser() {
     const { ctx } = this;

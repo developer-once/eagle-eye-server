@@ -6,8 +6,10 @@ import BaseController from './BaseController';
 export default class SaveController extends BaseController {
 
   /**
-   * 查询项目
-   * @param { String } app_key
+   * @summary 查询项目
+   * @router get /api/get/project
+   * @request query string appkey 项目 appkey
+   * @response 200 SuccessBody 返回结果
    */
   public async getProject() {
     const { ctx } = this;
@@ -18,22 +20,16 @@ export default class SaveController extends BaseController {
   }
 
   /**
-   * 查询 PV/UV 数据
-   * @param { String } app_key
+   * @summary 查询 UV 数据
+   * @router get /api/get/page/uv
+   * @request query string appkey 项目 appkey
+   * @request query string startTime 开始时间
+   * @request query string endTime 结束时间
+   * @response 200 SuccessBody 返回结果
    */
   public async getPageUv() {
     const { ctx } = this;
     const { app_key, startTime, endTime } = ctx.request.query;
     ctx.body = await ctx.service.get.getUvList(app_key, startTime, endTime);
-  }
-
-  /**
-   * 查询用户项目列表
-   */
-  public async getUserProjectList() {
-    const { ctx } = this;
-    // --- 获取 cookie ---
-    const user = await ctx.service.common.getUser();
-    if (user) {}
   }
 }

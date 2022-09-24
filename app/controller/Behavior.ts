@@ -2,9 +2,18 @@ import BaseController from './BaseController';
 
 /**
  * save report error msg to MYSQL
- * @controller 上报 Controller
+ * @controller BehaviorController
  */
 export default class BehaviorController extends BaseController {
+
+  /**
+   * @summary 获取点击事件数据
+   * @router get /api/get/dashboard/click
+   * @request query string appkey 项目 appkey
+   * @request query string startTime 开始时间
+   * @request query string endTime 结束时间
+   * @response 200 SuccessBody 返回结果
+   */
   public async getClickDashboard() {
     const { ctx } = this;
     const { app_key, startTime, endTime } = ctx.request.query;
@@ -14,10 +23,12 @@ export default class BehaviorController extends BaseController {
   }
 
   /**
-   * --- 根据 url 聚合页面点击事件 ---
-   * @param { String } app_key
-   * @param { String } startTime
-   * @param { String } endTime
+   * @summary 根据 url 聚合页面点击事件
+   * @router get /api/get/dashboard/url
+   * @request query string appkey 项目 appkey
+   * @request query string startTime 开始时间
+   * @request query string endTime 结束时间
+   * @response 200 SuccessBody 返回结果
    */
    public async getClickEventGroupByUrl() {
     const { ctx } = this;

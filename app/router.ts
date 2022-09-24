@@ -32,7 +32,7 @@ export default (app: Application) => {
 
   // ---------- Behavior ----------
   router.get('/api/get/page/uv', controller.get.getPageUv);
-  router.get('/api/get/group/page/click', controller.behavior.getClickEventGroupByUrl)
+  router.get('/api/get/dashboard/url', controller.behavior.getClickEventGroupByUrl)
 
 
   // ---------- Customize ----------

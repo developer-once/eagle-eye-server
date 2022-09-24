@@ -2,7 +2,7 @@ import BaseController from './BaseController';
 
 /**
  * save report error msg to MYSQL
- * @controller 上报 Controller
+ * @controller ReportController
  */
 export default class ReportController extends BaseController {
   /**

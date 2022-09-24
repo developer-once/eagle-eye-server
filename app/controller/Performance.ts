@@ -7,10 +7,12 @@ export default class PerformanceController extends BaseController {
 
   // ------------------------------- 整站 -------------------------------
   /**
-   * --- 查询总 Res 、API ---
-   * @param { String } app_key
-   * @param { String } startTime
-   * @param { String } endTime
+   * @summary 查询总 Res 、API
+   * @router get /api/get/dashboard/performance
+   * @request query string appkey 项目 appkey
+   * @request query string startTime 开始时间
+   * @request query string endTime 结束时间
+   * @response 200 SuccessBody 返回结果
    */
    public async getDashboard() {
     const { ctx } = this;
@@ -21,8 +23,12 @@ export default class PerformanceController extends BaseController {
   }
 
   /**
-   * --- 查询资源加载缓慢 ---
-   * @param { String } app_key
+   * @summary 查询资源加载缓慢
+   * @router get /api/get/dashboard/performance/res
+   * @request query string appkey 项目 appkey
+   * @request query string startTime 开始时间
+   * @request query string endTime 结束时间
+   * @response 200 SuccessBody 返回结果
    */
   public async getPerformanceResDashboard() {
     const { ctx } = this;
@@ -33,8 +39,12 @@ export default class PerformanceController extends BaseController {
   }
 
   /**
-   * --- 查询资源加载缓慢 ---
-   * @param { String } app_key
+   * @summary 查询接口缓慢
+   * @router get /api/get/dashboard/performance/api
+   * @request query string appkey 项目 appkey
+   * @request query string startTime 开始时间
+   * @request query string endTime 结束时间
+   * @response 200 SuccessBody 返回结果
    */
   public async getPerformanceApiDashboard() {
     const { ctx } = this;
@@ -47,7 +57,12 @@ export default class PerformanceController extends BaseController {
   
   // ------------------------------- 接口聚合 -------------------------------
   /**
-   * --- 接口聚合 资源、API ---
+   * @summary 接口聚合 资源、API
+   * @router get /api/get/group/performance
+   * @request query string appkey 项目 appkey
+   * @request query string startTime 开始时间
+   * @request query string endTime 结束时间
+   * @response 200 SuccessBody 返回结果
    */
   public async getGroupPerformanceAll() {
     const { ctx } = this;
@@ -58,7 +73,12 @@ export default class PerformanceController extends BaseController {
   }
 
   /**
-   * --- 接口聚合 API ---
+   * @summary 查询性能 API
+   * @router get /api/get/group/performance/api
+   * @request query string appkey 项目 appkey
+   * @request query string startTime 开始时间
+   * @request query string endTime 结束时间
+   * @response 200 SuccessBody 返回结果
    */
   public async getGroupPerformanceApi() {
     const { ctx } = this;
@@ -69,7 +89,12 @@ export default class PerformanceController extends BaseController {
   }
 
   /**
-   * --- 接口聚合 API ---
+   * @summary 查询性能 res
+   * @router get /api/get/group/performance/res
+   * @request query string appkey 项目 appkey
+   * @request query string startTime 开始时间
+   * @request query string endTime 结束时间
+   * @response 200 SuccessBody 返回结果
    */
    public async getGroupPerformanceRes() {
     const { ctx } = this;

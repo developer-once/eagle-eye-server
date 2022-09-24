@@ -6,8 +6,10 @@ import BaseController from './BaseController';
 export default class ProjectController extends BaseController {
 
   /**
-   * --- 创建项目 ---
-   * @param { String } name
+   * @summary 创建项目
+   * @router post api/create/project
+   * @request query string name 项目名称
+   * @response 200 SuccessBody 返回结果
    */
   public async create() {
     const { ctx } = this;
@@ -24,8 +26,10 @@ export default class ProjectController extends BaseController {
   }
 
   /**
-   * --- 查询项目 ---
-   * @param { String } app_key
+   * @summary 查询项目
+   * @router get /api/get/project
+   * @request query string app_key 项目 app_key
+   * @response 200 SuccessBody 返回结果
    */
   public async getProject() {
     const { ctx } = this;
@@ -53,7 +57,10 @@ export default class ProjectController extends BaseController {
 
 
   /**
-   * --- 查询用户项目列表 ---
+   * @summary 查询用户项目列表
+   * @router get /api/get/project/list
+   * @request query string name 项目名称
+   * @response 200 SuccessBody 返回结果
    */
   public async getUserProjectList() {
     const { ctx } = this;
@@ -65,8 +72,12 @@ export default class ProjectController extends BaseController {
 
 
   /**
-   * --- 设置项目 ---
-   * @param { String } name
+   * @summary 设置项目
+   * @router post /api/project/set
+   * @request query string name 项目名称
+   * @request query string app_key 项目 app_key
+   * @request query boolean serverOpenRecord 是否开启 rrweb 录屏
+   * @response 200 SuccessBody 返回结果
    */
   public async set() {
     const { ctx } = this;
